@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<Scrollview-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    mIns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:fillviewport="true" />-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <ScrollView android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:minWidth="48dp"
+                android:minHeight="5dp"
+                android:text="Liver Disease Prediction"
+                android:textAlignment="center"
+                android:textSize="20dp"></TextView>
+
+            <EditText
+                android:id="@+id/Age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Age"
+                android:minWidth="48dp"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Gender ( Male = 1 , Female = 0 )"
+                android:id="@+id/Gender"
+                android:layout_marginTop="5dp" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Total_Bilirubin"
+                android:id= "@+id/Total_Bilirubin"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Direct_Bilirubin"
+                android:id= "@+id/Direct_Bilirubin"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Alkaline_Phosphotase"
+                android:id= "@+id/Alkaline_Phosphotase"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Alamine_Aminotransferase"
+                android:id= "@+id/Alamine_Aminotransferase"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Aspartate_Aminotransferase"
+                android:id= "@+id/Aspartate_Aminotransferase"
+                android:layout_marginTop="5dp"></EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Total_Protiens"
+                android:id= "@+id/Total_Protiens"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Albumin"
+                android:id= "@+id/Albumin"
+                android:layout_marginTop="5dp"></EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:hint="Albumin_and_Globulin_Ratio"
+                android:id= "@+id/Albumin_and_Globulin_Ratio"
+                android:layout_marginTop="5dp"
+                ></EditText>
+
+            <Button
+                android:id="@+id/predict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Predict"></Button>
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Result Value"
+                android:textAlignment="center"
+                android:textSize="20dp"></TextView>
+            <Button
+                android:id="@+id/button"
+                android:layout_width="391dp"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="46dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="25dp"
+                android:hint="add user information"
+                android:onClick="addUser"
+                android:textColor="#5E35B1"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintBottom_toTopOf="@+id/button2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/result"
+                tools:ignore="OnClick,TextContrastCheck" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="391dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="158dp"
+                android:hint="view profile's (DB)"
+                android:onClick="viewdata"
+                android:textSize="18sp"
+                android:textStyle="bold|italic"
+                app:backgroundTint="@color/teal_200"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button"
+                tools:ignore="OnClick" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
